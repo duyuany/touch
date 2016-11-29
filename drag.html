@@ -37,6 +37,12 @@
     var marginL;
     var num=0;
 
+    $(".box").onmousedown=function(e){
+        e.preventDefault();
+    }
+    $(".box").onmousemove=function(e){
+        e.preventDefault();
+    }
     touch.on("body","dragstart",".box",function(){
         $(".box").css({transition:"none"});
         marginL=parseInt($(".box").css("marginLeft"))?parseInt($(".box").css("marginLeft")):0;
