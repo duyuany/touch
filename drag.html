@@ -47,7 +47,7 @@
     })
 
     touch.on("body","dragend",".box",function(e){
-        if(Math.abs(e.x)>100){
+        if(Math.abs(e.x)>200){
             if(e.direction=="left"){
                 num++;
                 if(num==$(".box a").length){
@@ -66,7 +66,7 @@
         }
         else{
             $(".box").css({
-                marginLeft:num*cw,
+                marginLeft:-num*cw,
                 transition:"margin 1s ease"
             })
         }
