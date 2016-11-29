@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>移动端轮播</title>
     <script src="js/touch.js"></script>
-    <script src="js/zepto.js"></script>
+    <script src="js/jquery.js"></script>
     <style>
         body,html{
             margin:0;padding:0;width:100%;height:100%;
@@ -37,12 +37,12 @@
     var marginL;
     var num=0;
 
-    $(".box").onmousedown=function(e){
+    $(".box").mousedown(function(e){
         e.preventDefault();
-    }
-    $(".box").onmousemove=function(e){
+    })
+    $(".box").mousemove(function(e){
         e.preventDefault();
-    }
+    })
     touch.on("body","dragstart",".box",function(){
         $(".box").css({transition:"none"});
         marginL=parseInt($(".box").css("marginLeft"))?parseInt($(".box").css("marginLeft")):0;
